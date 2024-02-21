@@ -1,5 +1,3 @@
-// backwardChaining.h
-
 #ifndef BACKWARDCHAINING_H
 #define BACKWARDCHAINING_H
 

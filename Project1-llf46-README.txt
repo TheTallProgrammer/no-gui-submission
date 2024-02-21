@@ -14,7 +14,7 @@ Setup
 -----
 After downloading the project folder, navigate to the `src` directory. This can be done by opening Command Prompt and executing the following command:
 
-cd path\to\downloaded\project\src
+'cd path\to\downloaded\project\src'
 
 Replace 'path\to\downloaded\project' with the actual path where the project folder is located.
 
@@ -22,7 +22,7 @@ Building the Project
 --------------------
 In the Command Prompt within the `src` directory, compile the project with the following command:
 
-g++ -I ./ *.cpp
+'g++ -I ./ *.cpp'
 
 This command will compile all `.cpp` files in the `src` directory.
 
@@ -30,7 +30,7 @@ Running the Program
 -------------------
 To run the program after building it, type:
 
-a
+'a'
 
 Usage
 -----

@@ -14,7 +14,7 @@ std::string getCurrentTime() {
 void testingOutput(const std::string text) {
     // The symbols for the border can be changed to anything you like
     const std::string timeStr = getCurrentTime();
-    std::cout << "* [" << timeStr << "] - " << text << std::endl;
+    std::cout << "\n* [" << timeStr << "] - " << text << std::endl;
     std::cout << "" << std::endl;
 }
 void printClauses(std::vector<std::reference_wrapper<ClauseVariable>>& clauses) {
