@@ -1,0 +1,345 @@
+Rule 1
+Condition: !attack_was_identified, Clause: 4
+Conclusion: nil
+
+Rule 2
+Condition: attack_was_identified, Clause: 4
+Condition: attack_was_ransomware, Clause: 8
+Conclusion: ransomware
+
+Rule 3
+Condition: attack_was_identified, Clause: 4
+Condition: !attack_was_ransomware, Clause: 8
+Condition: attack_was_virus, Clause: 12
+Conclusion: virus
+
+Rule 4
+Condition: attack_was_identified, Clause: 4
+Condition: !attack_was_ransomware, Clause: 8
+Condition: !attack_was_virus, Clause: 12
+Condition: attack_was_trojan_horse, Clause: 16
+Conclusion: trojan_horse
+
+Rule 5
+Condition: attack_was_identified, Clause: 4
+Condition: !attack_was_ransomware, Clause: 8
+Condition: !attack_was_virus, Clause: 12
+Condition: !attack_was_trojan_horse, Clause: 16
+Condition: attack_was_malware, Clause: 20
+Conclusion: malware
+
+Rule 6
+Condition: attack_was_identified, Clause: 4
+Condition: !attack_was_ransomware, Clause: 8
+Condition: !attack_was_virus, Clause: 12
+Condition: !attack_was_trojan_horse, Clause: 16
+Condition: !attack_was_malware, Clause: 20
+Condition: attack_was_ddos, Clause: 24
+Conclusion: ddos
+
+Rule 7
+Condition: attack_was_identified, Clause: 4
+Condition: !attack_was_ransomware, Clause: 8
+Condition: !attack_was_virus, Clause: 12
+Condition: !attack_was_trojan_horse, Clause: 16
+Condition: !attack_was_malware, Clause: 20
+Condition: !attack_was_ddos, Clause: 24
+Condition: attack_was_botnet, Clause: 28
+Conclusion: botnet
+
+Rule 8
+Condition: attack_was_identified, Clause: 4
+Condition: !attack_was_ransomware, Clause: 8
+Condition: !attack_was_virus, Clause: 12
+Condition: !attack_was_trojan_horse, Clause: 16
+Condition: !attack_was_malware, Clause: 20
+Condition: !attack_was_ddos, Clause: 24
+Condition: !attack_was_botnet, Clause: 28
+Condition: attack_was_spyware, Clause: 32
+Conclusion: spyware
+
+Rule 9
+Condition: attack_was_identified, Clause: 4
+Condition: !attack_was_ransomware, Clause: 8
+Condition: !attack_was_virus, Clause: 12
+Condition: !attack_was_trojan_horse, Clause: 16
+Condition: !attack_was_malware, Clause: 20
+Condition: !attack_was_ddos, Clause: 24
+Condition: !attack_was_botnet, Clause: 28
+Condition: !attack_was_spyware, Clause: 32
+Condition: attack_was_man_in_middle, Clause: 36
+Conclusion: man_in_the_middle
+
+Rule 10
+Condition: attack_was_identified, Clause: 4
+Condition: !attack_was_ransomware, Clause: 8
+Condition: !attack_was_virus, Clause: 12
+Condition: !attack_was_trojan_horse, Clause: 16
+Condition: !attack_was_malware, Clause: 20
+Condition: !attack_was_ddos, Clause: 24
+Condition: !attack_was_botnet, Clause: 28
+Condition: !attack_was_spyware, Clause: 32
+Condition: !attack_was_man_in_middle, Clause: 36
+Condition: attack_was_password_attack, Clause: 40
+Conclusion: password_attack
+
+Rule 11
+Condition: attack_was_identified, Clause: 4
+Condition: !attack_was_ransomware, Clause: 8
+Condition: !attack_was_virus, Clause: 12
+Condition: !attack_was_trojan_horse, Clause: 16
+Condition: !attack_was_malware, Clause: 20
+Condition: !attack_was_ddos, Clause: 24
+Condition: !attack_was_botnet, Clause: 28
+Condition: !attack_was_spyware, Clause: 32
+Condition: !attack_was_man_in_middle, Clause: 36
+Condition: !attack_was_password_attack, Clause: 40
+Condition: attack_was_sql_injection, Clause: 44
+Conclusion: sql_injection
+
+Rule 12
+Condition: attack_was_identified, Clause: 4
+Condition: !attack_was_ransomware, Clause: 8
+Condition: !attack_was_virus, Clause: 12
+Condition: !attack_was_trojan_horse, Clause: 16
+Condition: !attack_was_malware, Clause: 20
+Condition: !attack_was_ddos, Clause: 24
+Condition: !attack_was_botnet, Clause: 28
+Condition: !attack_was_spyware, Clause: 32
+Condition: !attack_was_man_in_middle, Clause: 36
+Condition: !attack_was_password_attack, Clause: 40
+Condition: !attack_was_sql_injection, Clause: 44
+Condition: attack_was_dns_tunneling, Clause: 48
+Conclusion: dns_tunneling
+
+Rule 13
+Condition: attack_was_identified, Clause: 4
+Condition: !attack_was_ransomware, Clause: 8
+Condition: !attack_was_virus, Clause: 12
+Condition: !attack_was_trojan_horse, Clause: 16
+Condition: !attack_was_malware, Clause: 20
+Condition: !attack_was_ddos, Clause: 24
+Condition: !attack_was_botnet, Clause: 28
+Condition: !attack_was_spyware, Clause: 32
+Condition: !attack_was_man_in_middle, Clause: 36
+Condition: !attack_was_password_attack, Clause: 40
+Condition: !attack_was_sql_injection, Clause: 44
+Condition: !attack_was_dns_tunneling, Clause: 48
+Condition: attack_was_network_intrusion, Clause: 52
+Conclusion: network_intrusion
+
+Rule 14
+Condition: attack_was_identified, Clause: 4
+Condition: !attack_was_ransomware, Clause: 8
+Condition: !attack_was_virus, Clause: 12
+Condition: !attack_was_trojan_horse, Clause: 16
+Condition: !attack_was_malware, Clause: 20
+Condition: !attack_was_ddos, Clause: 24
+Condition: !attack_was_botnet, Clause: 28
+Condition: !attack_was_spyware, Clause: 32
+Condition: !attack_was_man_in_middle, Clause: 36
+Condition: !attack_was_password_attack, Clause: 40
+Condition: !attack_was_sql_injection, Clause: 44
+Condition: !attack_was_dns_tunneling, Clause: 48
+Condition: !attack_was_network_intrusion, Clause: 52
+Condition: attack_was_social_engineering, Clause: 56
+Conclusion: social_engineering
+
+Rule 15
+Condition: attack_was_identified, Clause: 4
+Condition: !attack_was_ransomware, Clause: 8
+Condition: !attack_was_virus, Clause: 12
+Condition: !attack_was_trojan_horse, Clause: 16
+Condition: !attack_was_malware, Clause: 20
+Condition: !attack_was_ddos, Clause: 24
+Condition: !attack_was_botnet, Clause: 28
+Condition: !attack_was_spyware, Clause: 32
+Condition: !attack_was_man_in_middle, Clause: 36
+Condition: !attack_was_password_attack, Clause: 40
+Condition: !attack_was_sql_injection, Clause: 44
+Condition: !attack_was_dns_tunneling, Clause: 48
+Condition: !attack_was_network_intrusion, Clause: 52
+Condition: !attack_was_social_engineering, Clause: 56
+Condition: attack_was_denial_of_service, Clause: 60
+Conclusion: denial_of_service
+
+Rule 16
+Condition: attack_was_identified, Clause: 4
+Condition: !attack_was_ransomware, Clause: 8
+Condition: !attack_was_virus, Clause: 12
+Condition: !attack_was_trojan_horse, Clause: 16
+Condition: !attack_was_malware, Clause: 20
+Condition: !attack_was_ddos, Clause: 24
+Condition: !attack_was_botnet, Clause: 28
+Condition: !attack_was_spyware, Clause: 32
+Condition: !attack_was_man_in_middle, Clause: 36
+Condition: !attack_was_password_attack, Clause: 40
+Condition: !attack_was_sql_injection, Clause: 44
+Condition: !attack_was_dns_tunneling, Clause: 48
+Condition: !attack_was_network_intrusion, Clause: 52
+Condition: !attack_was_social_engineering, Clause: 56
+Condition: !attack_was_denial_of_service, Clause: 60
+Condition: attack_was_packet_analyzer, Clause: 64
+Conclusion: packet_analyzer
+
+Rule 17
+Condition: attack_was_identified
+Condition: !attack_was_ransomware
+Condition: !attack_was_virus
+Condition: !attack_was_trojan_horse
+Condition: !attack_was_malware
+Condition: !attack_was_ddos
+Condition: !attack_was_botnet
+Condition: !attack_was_spyware
+Condition: !attack_was_man_in_middle
+Condition: !attack_was_password_attack
+Condition: !attack_was_sql_injection
+Condition: !attack_was_dns_tunneling
+Condition: !attack_was_network_intrusion
+Condition: !attack_was_social_engineering
+Condition: !attack_was_denial_of_service
+Condition: !attack_was_packet_analyzer
+Conclusion: nil
+
+Variable: attack_was_identified
+Type: boolean
+Instantiated: false
+Clause Number: 4
+
+Variable: attack_was_ransomware
+Type: boolean
+Instantiated: false
+Clause Number: 8
+
+Variable: attack_was_virus
+Type: boolean
+Instantiated: false
+Clause Number: 12
+
+Variable: attack_was_trojan_horse
+Type: boolean
+Instantiated: false
+Clause Number: 16
+
+Variable: attack_was_malware
+Type: boolean
+Instantiated: false
+Clause Number: 20
+
+Variable: attack_was_ddos_attack
+Type: boolean
+Instantiated: false
+Clause Number: 24
+
+Variable: attack_was_botnet_activity
+Type: boolean
+Instantiated: false
+Clause Number: 28
+
+Variable: attack_was_spyware
+Type: boolean
+Instantiated: false
+Clause Number: 32
+
+Variable: attack_was_man_in_middle_attack
+Type: boolean
+Instantiated: false
+Clause Number: 36
+
+Variable: attack_was_password_attack
+Type: boolean
+Instantiated: false
+Clause Number: 40
+
+Variable: attack_was_sql_injection
+Type: boolean
+Instantiated: false
+Clause Number: 44
+
+Variable: attack_was_dns_tunneling
+Type: boolean
+Instantiated: false
+Clause Number: 48
+
+Variable: attack_was_network_intrusion
+Type: boolean
+Instantiated: false
+Clause Number: 52
+
+Variable: attack_was_social_engineering_attack
+Type: boolean
+Instantiated: false
+Clause Number: 56
+
+Variable: attack_was_denial_of_service_attack
+Type: boolean
+Instantiated: false
+Clause Number: 60
+
+Variable: attack_was_packet_analyzer
+Type: boolean
+Instantiated: false
+Clause Number: 64
+
+Conclusion: ransomware
+How to Stop Attack: Immediately isolate the affected systems to prevent spread. Restore data from backups after ensuring no remnants of the malware remain.
+How to Prevent Attack: Regular backups, staff training on phishing and malicious emails, and updated antivirus programs are crucial.
+
+Conclusion: virus
+How to Stop Attack: Use updated antivirus software to identify and remove the virus. Repair or restore any damaged files.
+How to Prevent Attack: Keep all systems and antivirus software updated. Regularly scan for and remove potential threats.
+
+Conclusion: trojan_horse
+How to Stop Attack: Identify and remove the Trojan. Reinforce network security by closing any backdoors created by the Trojan.
+How to Prevent Attack: Avoid downloading software from untrusted sources. Keep security software and system patches up-to-date.
+
+Conclusion: malware
+How to Stop Attack: Isolate infected systems, run malware scans, and remove malicious files. Review and tighten security controls.
+How to Prevent Attack: Maintain updated antivirus solutions and perform regular system scans. Educate users about safe browsing habits.
+
+Conclusion: ddos_attack
+How to Stop Attack: Deploy DDoS mitigation techniques like rate limiting and scrubbing. Reroute traffic if necessary.
+How to Prevent Attack: Invest in robust DDoS protection services and plan for excess bandwidth. Regularly monitor network traffic patterns.
+
+Conclusion: botnet_activity
+How to Stop Attack: Identify and block botnet-related network traffic. Cleanse affected systems and monitor for further activity.
+How to Prevent Attack: Employ advanced network monitoring and intrusion detection systems. Train staff to recognize signs of botnet activity.
+
+Conclusion: spyware
+How to Stop Attack: Employ anti-spyware tools to detect and remove spyware. Review and reset compromised security settings.
+How to Prevent Attack: Use comprehensive endpoint protection and conduct regular security training for users.
+
+Conclusion: packet_analyzer
+How to Stop Attack: Detect and isolate unauthorized network sniffing activities.
+How to Prevent Attack: Use encryption and secure network protocols.
+
+Conclusion: man_in_the_middle_attack
+How to Stop Attack: Encrypt all data transmissions. Use HTTPS and SSL/TLS protocols to secure web communications.
+How to Prevent Attack: Employ strong encryption for data in transit. Educate users on the importance of secure connections.
+
+Conclusion: password_attack
+How to Stop Attack: Immediately reset compromised passwords. Implement multi-factor authentication for added security.
+How to Prevent Attack: Use strong, unique passwords and change them regularly. Educate users on secure password practices.
+
+Conclusion: sql_injection
+How to Stop Attack: Immediately patch vulnerable SQL elements. Use prepared statements and parameterized queries for database access.
+How to Prevent Attack: Conduct code reviews to identify vulnerabilities. Educate developers about secure coding practices.
+
+Conclusion: dns_tunneling
+How to Stop Attack: Monitor and analyze DNS traffic for anomalies. Block unauthorized DNS queries and tunneling activities.
+How to Prevent Attack: Implement DNS security measures like DNSSEC. Regularly review and update DNS firewall settings.
+
+Conclusion: network_intrusion
+How to Stop Attack: Aquire a VPN and turn it on, reset the router, and possible contact network provider for a change in IP address depending on the scope of the attack. 
+How to Prevent Attack: Continue use of a VPN for further browsing and connect to websites that are SSL certified. 
+
+Conclusion: social_engineering_attack
+How to Stop Attack: Educate employees to recognize and report attempts. Review and update security protocols.
+How to Prevent Attack: Conduct regular training on social engineering tactics. Foster a culture of security awareness in the organization.
+
+Conclusion: denial_of_service_attack
+How to Stop Attack: Implement network hardware capable of handling unexpected traffic spikes. Use cloud-based DDoS mitigation services.
+How to Prevent Attack: Prepare a response plan for potential attacks. Increase network redundancy and distribute network resources.
+
+Conclusion: nil
+Default: No attack found.

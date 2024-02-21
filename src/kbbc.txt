@@ -1,0 +1,116 @@
+Rules:
+Rule 15
+Clause: unauthorized_access_or_control, ClauseNumber: 3, clauseMeaning: Is there unauthorized access or control?
+Clause: file_changes_or_configurations, ClauseNumber: 4, clauseMeaning: Are there changes to files or configurations?
+Clause: files_corrupted_without_ransom, ClauseNumber: 5, clauseMeaning: Are there files corrupted without a request for ransom?
+Conclusion: ransomware
+
+Rule 30
+Clause: unauthorized_access_or_control, ClauseNumber: 9
+Clause: file_changes_or_configurations, ClauseNumber: 10
+Clause: !files_corrupted_without_ransom, ClauseNumber: 11
+Conclusion: virus
+
+Rule 45
+Clause: unauthorized_access_or_control, ClauseNumber: 15
+Clause: !file_changes_or_configurations, ClauseNumber: 16
+Clause: backdoor_accounts_or_tools_found, ClauseNumber: 17, clauseMeaning: Are there backdoor accounts or tools found on the system?
+Clause: evidence_of_data_exfiltration, ClauseNumber: 18, clauseMeaning: Is there evidence of data exfiltration?
+Conclusion: trojan_horse
+
+Rule 60
+Clause: unauthorized_access_or_control, ClauseNumber: 21
+Clause: !file_changes_or_configurations, ClauseNumber: 22
+Clause: backdoor_accounts_or_tools_found, ClauseNumber: 23
+Clause: !evidence_of_data_exfiltration, ClauseNumber: 24
+Conclusion: malware
+
+Rule 75
+Clause: unauthorized_access_or_control, ClauseNumber: 27
+Clause: !file_changes_or_configurations, ClauseNumber: 28
+Clause: !backdoor_accounts_or_tools_found, ClauseNumber: 29
+Clause: high_volume_of_outgoing_traffic, ClauseNumber: 30, clauseMeaning: Is there a high volume of outgoing traffic?
+Clause: traffic_targeting_multiple_systems, ClauseNumber: 31, clauseMeaning: Is the traffic targeting multiple systems?
+Conclusion: ddos_attack
+
+Rule 90
+Clause: unauthorized_access_or_control, ClauseNumber: 33
+Clause: !file_changes_or_configurations, ClauseNumber: 34
+Clause: !backdoor_accounts_or_tools_found, ClauseNumber: 35
+Clause: high_volume_of_outgoing_traffic, ClauseNumber: 36
+Clause: !traffic_targeting_multiple_systems, ClauseNumber: 37
+Conclusion: botnet_activity
+
+Rule 105
+Clause: unauthorized_access_or_control, ClauseNumber: 39
+Clause: !file_changes_or_configurations, ClauseNumber: 40
+Clause: !backdoor_accounts_or_tools_found, ClauseNumber: 41
+Clause: !high_volume_of_outgoing_traffic, ClauseNumber: 42
+Clause: unsual_system_behavior_without_high_traffic, ClauseNumber: 43, clauseMeaning: Is there unusual system behavior without a high volume of traffic?
+Conclusion: spyware
+
+Rule 120
+Clause: unauthorized_access_or_control, ClauseNumber: 45
+Clause: !file_changes_or_configurations, ClauseNumber: 46
+Clause: !backdoor_accounts_or_tools_found, ClauseNumber: 47
+Clause: !high_volume_of_outgoing_traffic, ClauseNumber: 48
+Clause: !unsual_system_behavior_without_high_traffic, ClauseNumber: 49
+Conclusion: packet_analyzer
+
+Rule 135
+Clause: !unauthorized_access_or_control, ClauseNumber: 51
+Clause: unusual_network_activity, ClauseNumber: 52, clauseMeaning: Is there unusual network activity?
+Clause: network_activity_external, ClauseNumber: 53, clauseMeaning: Is the network activity external?
+Clause: unexpected_login_attempts, ClauseNumber: 54, clauseMeaning: Are there unexpected login attempts?
+Conclusion: password_attack
+
+Rule 150
+Clause: !unauthorized_access_or_control, ClauseNumber: 57
+Clause: unusual_network_activity, ClauseNumber: 58
+Clause: network_activity_external, ClauseNumber: 59
+Clause: !unexpected_login_attempts, ClauseNumber: 60
+Conclusion: man_in_the_middle_attack
+
+Rule 165
+Clause: !unauthorized_access_or_control, ClauseNumber: 63
+Clause: unusual_network_activity, ClauseNumber: 64
+Clause: !network_activity_external, ClauseNumber: 65
+Clause: unusual_activity_related_to_data_flow, ClauseNumber: 66, clauseMeaning: Is the unusual activity related to data flow?
+Clause: increase_in_dns_requests, ClauseNumber: 67, clauseMeaning: Is there an increase in DNS requests?
+Conclusion: dns_tunneling
+
+Rule 180
+Clause: !unauthorized_access_or_control, ClauseNumber: 69
+Clause: unusual_network_activity, ClauseNumber: 70
+Clause: !network_activity_external, ClauseNumber: 71
+Clause: unusual_activity_related_to_data_flow, ClauseNumber: 72, clauseMeaning: Is the unusual activity related to data flow?
+Clause: !increase_in_dns_requests, ClauseNumber: 73, clauseMeaning: Is there an increase in DNS requests?
+Conclusion: sql_injection
+
+Rule 195
+Clause: !unauthorized_access_or_control, ClauseNumber: 75
+Clause: unusual_network_activity, ClauseNumber: 76
+Clause: !network_activity_external, ClauseNumber: 77
+Clause: !unusual_activity_related_to_data_flow, ClauseNumber: 78
+Clause: unauthorized_access_to_network_or_data, ClauseNumber: 79, clauseMeaning: Is the unauthorized access to the data or network?
+Conclusion: network_intrusion
+
+Rule 210
+Clause: !unauthorized_access_or_control, ClauseNumber: 81
+Clause: unusual_network_activity, ClauseNumber: 82
+Clause: !network_activity_external, ClauseNumber: 83
+Clause: !unusual_activity_related_to_data_flow, ClauseNumber: 84
+Clause: !unauthorized_access_to_network_or_data, ClauseNumber: 85
+Conclusion: social_engineering_attack
+
+Rule 225
+Clause: !unauthorized_access_or_control, ClauseNumber: 87
+Clause: !unusual_network_activity, ClauseNumber: 88
+Clause: slow_network_or_system_performance_without_external_activity, ClauseNumber: 89, clauseMeaning: Is there a slow network or system performance without external activity?
+Conclusion: denial_of_service_attack
+
+Rule 240
+Clause: !unauthorized_access_or_control, ClauseNumber: 93
+Clause: !unusual_network_activity, ClauseNumber: 94
+Clause: !slow_network_or_system_performance_without_external_activity, ClauseNumber: 95
+Conclusion: nil
