@@ -5,7 +5,7 @@
 #ifndef CS4346_PROJECT_1_MAIN_H
 #define CS4346_PROJECT_1_MAIN_H
 
-#include "backwardChaining.h"
-#include "forwardChaining.h"
+#include "Project1-llf46-backwardChaining.h"
+#include "Project1-llf46-forwardChaining.h"
 
 #endif //CS4346_PROJECT_1_MAIN_H

@@ -18,8 +18,8 @@
 #include <chrono> 
 #include <ctime> 
 
-#include "data.h"
-#include "parser.h"
+#include "Project1-llf46-data.h"
+#include "Project1-llf46-parser.h"
 
 // Prototypes for output functions
 void testingOutput(const std::string text);

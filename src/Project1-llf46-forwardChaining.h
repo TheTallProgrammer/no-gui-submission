@@ -6,7 +6,7 @@
 #include <string>
 #include <vector>
 #include <sstream>
-#include "data.h"
+#include "Project1-llf46-data.h"
 
 // Function prototypes
 void initializeArr(std::string array[]);

@@ -12,7 +12,7 @@
 #include <algorithm> 
 #include <map>
 
-#include "data.h"
+#include "Project1-llf46-data.h"
 
 void parseFile(const std::string &filename, std::map<int, std::string> &rules, std::vector<ClauseVariable> &clauses);
 std::string trim(const std::string &str);

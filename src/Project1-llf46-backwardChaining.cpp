@@ -1,4 +1,4 @@
-#include "backwardChaining.h"
+#include "Project1-llf46-backwardChaining.h"
 
 // test output functions
 std::string getCurrentTime() {
@@ -72,7 +72,7 @@ AttackResult Attacks_BW(){ // Parses knowledge base and extracts the data, keepi
     std::map<int, std::string> rules; // hashing 
     std::vector<ClauseVariable> clauses;
     std::vector<std::string> conclusions;
-    parseFile("kbbc.txt", rules, clauses);
+    parseFile("Project1-llf46-kbbc.txt", rules, clauses);
     conclusions = getConclusions(rules); // this contains all conclusion variables used for the engine
     AttackResult attack;
     std::stack<std::string> conclusionStack;

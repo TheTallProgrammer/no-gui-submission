@@ -3,11 +3,11 @@
 #include <string>
 #include <vector>
 #include <sstream>
-#include "forwardChaining.h"
+#include "Project1-llf46-forwardChaining.h"
 
 //puts all info into an array organized by chunk
 void initializeArr(std::string array[]){
-    std::ifstream inputFile("kbfc.txt"); // Open file
+    std::ifstream inputFile("Project1-llf46-kbfc.txt"); // Open file
     if (!inputFile) {
         std::cout << "Error opening file." << std::endl;
         return;
@@ -133,12 +133,6 @@ void populateConclusions(Conclusions con[], std::string array[]){
 
         counter++;
     }
-    /*
-    // Optional: Print all conclusions and descriptions for debugging
-    for (int j = 0; j < counter; j++) {
-        std::cout << "Conclusion: " << con[j].conclusion << std::endl;
-        std::cout << "Description: " << con[j].description << std::endl;
-    }*/
 }
 
 
@@ -146,15 +140,11 @@ void populateConclusions(Conclusions con[], std::string array[]){
 int Search_CVL(Variables var[], std::string type){
   //std::cout << type << std::endl;
   for(int i = 0; i < 17; i++){
-    // std::cout << "type: " + type + ", var[i]: " + var[i].variable << std::endl;
     if(type == var[i].variable){
       var[i].instantiated = "true";
-      //std::cout << "variable found" << std::endl;
       return var[i].clauseNum;
     }
   }
-   
-  //if goes past loop, variable not found, nil clause = 4
   return 4;
 }
 
@@ -171,16 +161,12 @@ void identifyCheck(bool identified, Variables var[]){
 }
 
 int validate_Ri(int ruleNum, Rules rules[], Variables var[], Conclusions conclusion[], AttackResult result){
-  //denial o f service, NIL
  
   int i = ruleNum - 1;
   int size = rules[i].conditions.size();
-   //std::cout << rules[i].conditions.size() << std::endl;
   int validated = true;
     for(int i = 0; i < 17; i++){
-      //std::cout << conclusion[i].conclusion << " " << result.typeOfAttack << std::endl;
       if( conclusion[i].conclusion  == result.typeOfAttack){
-        //std::cout << conclusion[i].conclusion << std::endl;
         return i;
       }
     }
